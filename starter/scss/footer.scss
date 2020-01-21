@@ -1,0 +1,17 @@
+.footer {
+  height: 50px;
+  width: 100%;
+  background-color: blue;
+
+  .copyright {
+    height: 10px;
+    width: 10px;
+    background-color: red;
+  }
+
+  .trademark {
+    height: 10px;
+    width: 50px;
+    color: green;
+  }
+}

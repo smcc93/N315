@@ -1,0 +1,19 @@
+{
+  "name": "starterpackage",
+  "version": "1.0.0",
+  "description": "this is a starter project for npm",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass scss/styles.scss css/styles.css -w"
+  },
+  "author": "Stewart McCalley",
+  "license": "ISC",
+  "devDependencies": {
+    "gitignore": "^0.6.0",
+    "node-sass": "^4.13.1"
+  }
+}

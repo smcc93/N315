@@ -1,0 +1,69 @@
+.gallery {
+  // height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 50, 0.8);
+
+  h2 {
+    font-size: 200%;
+  }
+
+  .photos {
+    //  height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-bottom: 50px;
+
+    .group {
+      // height: 90%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h5 {
+        font-size: 150%;
+      }
+
+      .pic1 {
+        @include shipImage("../images/halo1.jpg");
+      }
+      .pic2 {
+        @include shipImage("../images/halo2.jpg");
+      }
+      .pic3 {
+        @include shipImage("../images/halo3.jpg");
+      }
+      .pic4 {
+        @include shipImage("../images/gundam1.jpg");
+      }
+      .pic5 {
+        @include shipImage("../images/gundam2.png");
+      }
+      .pic6 {
+        @include shipImage("../images/gundam3.jpg");
+      }
+      .pic7 {
+        @include shipImage("../images/starwars1.jpg");
+      }
+      .pic8 {
+        @include shipImage("../images/starwars2.jpeg");
+      }
+      .pic9 {
+        @include shipImage("../images/starwars3.jpg");
+      }
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .photos {
+    display: flex;
+    flex-direction: column;
+  }
+}

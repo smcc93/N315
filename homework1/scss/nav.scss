@@ -1,0 +1,13 @@
+nav {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 50, 0.8);
+  padding-right: 100px;
+  a {
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+  }
+}

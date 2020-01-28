@@ -1,0 +1,29 @@
+.hero {
+  height: 80%;
+  background-color: gray;
+  background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url(../images/spaceship.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .callout {
+    height: 100px;
+    width: 100%;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(10, 10, 10, 0.4);
+    font-size: 150%;
+    //margin-left: 50px;
+    padding-left: 40px;
+    margin-top: 700px;
+    margin-bottom: 25px;
+  }
+}

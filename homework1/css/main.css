@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px; }
+
+nav {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 50, 0.8);
+  padding-right: 100px; }
+  nav a {
+    text-decoration: none;
+    padding: 20px;
+    color: white; }
+
+.hero {
+  height: 80%;
+  background-color: gray;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../images/spaceship.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .hero .callout {
+    height: 100px;
+    width: 100%;
+    text-align: left;
+    color: white;
+    background-color: rgba(10, 10, 10, 0.4);
+    font-size: 150%;
+    padding-left: 40px;
+    margin-top: 700px;
+    margin-bottom: 25px; }
+
+.spaceships {
+  width: 100%;
+  background-color: rgba(0, 0, 50, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .spaceships h2 {
+    font-size: 200%;
+    margin-top: 50px; }
+  .spaceships .articles {
+    display: flex;
+    justify-content: center; }
+    .spaceships .articles .articleOne {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      margin: 50px; }
+    .spaceships .articles .articleTwo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      margin: 50px; }
+    .spaceships .articles .articleThree {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      margin: 50px; }
+    .spaceships .articles a {
+      text-decoration: none;
+      color: white;
+      background-color: gray;
+      border-radius: 70px;
+      height: 25px;
+      width: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .spaceships .line {
+    border-bottom: solid 2px white;
+    width: 30%;
+    margin-top: 50px;
+    margin-bottom: 50px; }
+
+@media (max-width: 1250px) {
+  .articles {
+    display: flex;
+    flex-direction: column; } }
+
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 50, 0.8); }
+  .gallery h2 {
+    font-size: 200%; }
+  .gallery .photos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .gallery .photos .group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .gallery .photos .group h5 {
+        font-size: 150%; }
+      .gallery .photos .group .pic1 {
+        height: 250px;
+        width: 400px;
+        background-image: url("../images/halo1.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 10px; }
+      .gallery .photos .group .pic2 {
+        height: 250px;
+        width: 400px;
+        background-image: url("../images/halo2.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 10px; }
+      .gallery .photos .group .pic3 {
+        height: 250px;
+        width: 400px;
+        background-image: url("../images/halo3.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 10px; }
+      .gallery .photos .group .pic4 {
+        height: 250px;
+        width: 400px;
+        background-image: url("../images/gundam1.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 10px; }
+      .gallery .photos .group .pic5 {
+        height: 250px;
+        width: 400px;
+        background-image: url("../images/gundam2.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 10px; }
+      .gallery .photos .group .pic6 {
+        height: 250px;
+        width: 400px;
+        background-image: url("../images/gundam3.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 10px; }
+      .gallery .photos .group .pic7 {
+        height: 250px;
+        width: 400px;
+        background-image: url("../images/starwars1.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 10px; }
+      .gallery .photos .group .pic8 {
+        height: 250px;
+        width: 400px;
+        background-image: url("../images/starwars2.jpeg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 10px; }
+      .gallery .photos .group .pic9 {
+        height: 250px;
+        width: 400px;
+        background-image: url("../images/starwars3.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 10px; }
+
+@media (max-width: 1250px) {
+  .photos {
+    display: flex;
+    flex-direction: column; } }

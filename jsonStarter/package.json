@@ -1,0 +1,15 @@
+{
+  "name": "jsonstarter",
+  "version": "1.0.0",
+  "description": "populate a site using json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stewart McCalley",
+  "license": "ISC",
+  "devDependencies": {
+    "gitignore": "^0.6.0",
+    "node-sass": "^4.13.1"
+  }
+}

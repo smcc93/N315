@@ -1,0 +1,15 @@
+{
+  "MainNav": [
+    { "path": "home", "linkName": "home" },
+    { "path": "about", "linkName": "about" },
+    { "path": "products", "linkName": "products" },
+    { "path": "contact", "linkName": "contact" }
+  ],
+
+  "Pages": [
+    { "pageName": "home", "content": "<h1>HOME</h1>" },
+    { "pageName": "about", "content": "<h1>ABOUT</h1>" },
+    { "pageName": "products", "content": "<h1>PRODUCTS</h1>" },
+    { "pageName": "contact", "content": "<h1>CONTACT</h1>" }
+  ]
+}

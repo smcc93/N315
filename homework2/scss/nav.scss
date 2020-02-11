@@ -1,0 +1,11 @@
+nav {
+  height: 50px;
+  background-color: rgba(184, 162, 129, 1);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  a {
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+}

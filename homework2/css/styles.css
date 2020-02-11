@@ -16,6 +16,16 @@ h6,
 p {
   margin-bottom: 16px; }
 
+nav {
+  height: 50px;
+  background-color: #b8a281;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+  nav a {
+    text-decoration: none;
+    text-transform: capitalize; }
+
 .content {
   height: 100%; }
   .content .hero {

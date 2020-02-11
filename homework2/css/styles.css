@@ -26,9 +26,9 @@ nav {
     text-decoration: none;
     text-transform: capitalize;
     font-size: 25px; }
-  nav i {
-    font-size: 25px;
-    color: white; }
+    nav a .icon {
+      font-size: 25px;
+      color: white; }
 
 .content {
   height: 100%; }

@@ -5,15 +5,15 @@
     { "path": "contact", "linkName": "contact " },
     {
       "path": "facebook",
-      "linkName": "<a><i class='fab fa-facebook'></i></a>"
+      "linkName": "<i class='icon fab fa-facebook'></i></<i>"
     },
     {
       "path": "twitter",
-      "linkName": "<a><i class='fab fa-twitter-square'></i></a>"
+      "linkName": "<i class='icon fab fa-twitter-square'></i></<i>"
     },
     {
       "path": "snapchat",
-      "linkName": "<a><i class='fab fa-snapchat-square'></i></a>"
+      "linkName": "<i class='icon fab fa-snapchat-square'></i></<i>"
     }
   ],
 

@@ -3,9 +3,18 @@
     { "path": "home", "linkName": "home " },
     { "path": "exhibits", "linkName": "exhibits " },
     { "path": "contact", "linkName": "contact " },
-    { "path": "facebook", "linkName": "<i class='fab fa-facebook'></i>" },
-    { "path": "twitter", "linkName": "<i class='fab fa-twitter-square'></i>" },
-    { "path": "snapchat", "linkName": "<i class='fab fa-snapchat-square'></i>" }
+    {
+      "path": "facebook",
+      "linkName": "<a><i class='fab fa-facebook'></i></a>"
+    },
+    {
+      "path": "twitter",
+      "linkName": "<a><i class='fab fa-twitter-square'></i></a>"
+    },
+    {
+      "path": "snapchat",
+      "linkName": "<a><i class='fab fa-snapchat-square'></i></a>"
+    }
   ],
 
   "Pages": [

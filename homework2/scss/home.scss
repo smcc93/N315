@@ -5,9 +5,9 @@
     height: 60%;
 
     background-image: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        to bottom,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0)
       ),
       url("../img/hero.jpg");
     background-color: #b8a281;
@@ -20,5 +20,96 @@
       margin-left: 1350px;
       padding-top: 450px;
     }
+  }
+
+  .welcome {
+    padding-top: 50px;
+    background-color: #b8a281;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 200px;
+
+    .intro {
+      width: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-right: 200px;
+
+      p {
+        width: 90%;
+        text-align: center;
+      }
+    }
+
+    .adLink {
+      height: 500px;
+      width: 500px;
+      background-image: url("../img/homepageAd.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .attractions {
+    background-color: rgba(184, 162, 129, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2 {
+      padding: 20px;
+    }
+    .events {
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .event {
+        height: 500px;
+        width: 200px;
+      }
+    }
+
+    .shows {
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .show {
+        height: 500px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .dolphin {
+          @include showImage("../img/dolphinShow.jpg");
+        }
+        .cheetah {
+          @include showImage("../img/cheetahShow.jpg");
+        }
+        .walrus {
+          @include showImage("../img/walrusShow.jpg");
+        }
+        .rhino {
+          @include showImage("../img/rhinoShow.jpg");
+        }
+      }
+    }
+  }
+  .footer {
+    background-color: #b8a281;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
   }
 }

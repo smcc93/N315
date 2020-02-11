@@ -20,7 +20,7 @@ p {
   height: 100%; }
   .content .hero {
     height: 60%;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/hero.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("../img/hero.jpg");
     background-color: #b8a281;
     background-repeat: no-repeat;
     background-position: center;
@@ -29,3 +29,89 @@ p {
       text-align: left;
       margin-left: 1350px;
       padding-top: 450px; }
+  .content .welcome {
+    padding-top: 50px;
+    background-color: #b8a281;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 200px; }
+    .content .welcome .intro {
+      width: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-right: 200px; }
+      .content .welcome .intro p {
+        width: 90%;
+        text-align: center; }
+    .content .welcome .adLink {
+      height: 500px;
+      width: 500px;
+      background-image: url("../img/homepageAd.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain; }
+  .content .attractions {
+    background-color: rgba(184, 162, 129, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .content .attractions h2 {
+      padding: 20px; }
+    .content .attractions .events {
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .content .attractions .events .event {
+        height: 500px;
+        width: 200px; }
+    .content .attractions .shows {
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .content .attractions .shows .show {
+        height: 500px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .content .attractions .shows .show .dolphin {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/dolphinShow.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .attractions .shows .show .cheetah {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/cheetahShow.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .attractions .shows .show .walrus {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/walrusShow.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .attractions .shows .show .rhino {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/rhinoShow.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+  .content .footer {
+    background-color: #b8a281;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; }

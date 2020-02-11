@@ -125,3 +125,132 @@ nav {
     justify-content: center;
     align-items: center;
     height: 100px; }
+
+.content {
+  height: 100%; }
+  .content .exhibits {
+    display: flex;
+    justify-content: center;
+    background-color: #b8a281;
+    flex-direction: column;
+    align-items: center; }
+    .content .exhibits h2 {
+      text-transform: capitalize; }
+    .content .exhibits .animals {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      justify-content: space-around; }
+      .content .exhibits .animals .animal {
+        padding: 20px; }
+        .content .exhibits .animals .animal h5 {
+          text-transform: capitalize;
+          font-size: 20px; }
+        .content .exhibits .animals .animal .walrus {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/walrus.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .exhibits .animals .animal .dolphin {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/dolphin.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .exhibits .animals .animal .bear {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/bear.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .exhibits .animals .animal .tiger {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/tiger.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .exhibits .animals .animal .lion {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/lion.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .exhibits .animals .animal .emu {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/emu.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .exhibits .animals .animal .shark {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/shark.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .exhibits .animals .animal .elephant {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/elephant.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .exhibits .animals .animal .rhino {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/rhino.jpeg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .exhibits .animals .animal .cheetah {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/cheetah.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .exhibits .animals .animal .ape {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/ape.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .exhibits .animals .animal .lemur {
+          height: 200px;
+          width: 200px;
+          background-image: url("../img/lemur.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .content .exhibits .animals .animal p {
+          height: 150px;
+          width: 150px;
+          overflow: hidden; }
+  .content .tickets {
+    background-color: rgba(184, 162, 129, 0.8);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+    .content .tickets .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .content .tickets .info p {
+        width: 200px;
+        height: 300px; }
+    .content .tickets .ticket {
+      height: 200px;
+      width: 200px;
+      background-image: url("../img/tickets.jpeg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }

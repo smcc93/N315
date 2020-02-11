@@ -1,0 +1,88 @@
+.content {
+  height: 100%;
+  .exhibits {
+    display: flex;
+    justify-content: center;
+    background-color: #b8a281;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      text-transform: capitalize;
+    }
+    .animals {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      justify-content: space-around;
+      .animal {
+        padding: 20px;
+        h5 {
+          text-transform: capitalize;
+          font-size: 20px;
+        }
+        .walrus {
+          @include showImage("../img/walrus.jpg");
+        }
+        .dolphin {
+          @include showImage("../img/dolphin.jpg");
+        }
+        .bear {
+          @include showImage("../img/bear.jpg");
+        }
+        .tiger {
+          @include showImage("../img/tiger.jpg");
+        }
+        .lion {
+          @include showImage("../img/lion.jpg");
+        }
+        .emu {
+          @include showImage("../img/emu.jpg");
+        }
+        .shark {
+          @include showImage("../img/shark.jpg");
+        }
+        .elephant {
+          @include showImage("../img/elephant.jpg");
+        }
+        .rhino {
+          @include showImage("../img/rhino.jpeg");
+        }
+        .cheetah {
+          @include showImage("../img/cheetah.jpg");
+        }
+        .ape {
+          @include showImage("../img/ape.jpg");
+        }
+        .lemur {
+          @include showImage("../img/lemur.jpg");
+        }
+        p {
+          height: 150px;
+          width: 150px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  .tickets {
+    background-color: rgba(184, 162, 129, 0.8);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      align-items: center;
+      p {
+        width: 200px;
+        height: 300px;
+      }
+    }
+    .ticket {
+      @include showImage("../img/tickets.jpeg");
+    }
+  }
+}

@@ -254,3 +254,48 @@ nav {
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain; }
+  .content .memberships {
+    background-color: #b8a281;
+    display: flex;
+    justify-content: space-evenly; }
+    .content .memberships .pass {
+      height: 200px;
+      width: 200px;
+      background-image: url("../img/membership.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }
+    .content .memberships .memberInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .content .memberships .memberInfo p {
+        width: 250px;
+        height: 200px; }
+  .content .volunteer {
+    background-color: rgba(184, 162, 129, 0.8);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+    .content .volunteer .v1 {
+      height: 200px;
+      width: 200px;
+      background-image: url("../img/volunteer1.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }
+    .content .volunteer .v2 {
+      height: 200px;
+      width: 200px;
+      background-image: url("../img/volunteer2.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }
+    .content .volunteer .signUp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      .content .volunteer .signUp p {
+        width: 300px; }

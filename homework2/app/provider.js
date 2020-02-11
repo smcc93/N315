@@ -1,7 +1,7 @@
 var PROVIDER = (function() {
   var _allData = {};
   var _getData = function(callBack) {
-    $.getJSON("../data/data.json", function(data) {})
+    $.getJSON("data/data.json", function(data) {})
       .fail(function(error) {})
       .done(function(data) {
         console.log("done", data.MainNav);

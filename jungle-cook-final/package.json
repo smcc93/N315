@@ -1,0 +1,16 @@
+{
+  "name": "jungle-cook-final",
+  "version": "1.0.0",
+  "description": "final project for N315",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "host": "firebase serve --only hosting",
+    "sass": "node-sass public/scss/styles.scss public/css/styles.css -w",
+    "deploy": "firebase deploy --except functions"
+  },
+  "author": "Stewart McCalley",
+  "license": "ISC"
+}

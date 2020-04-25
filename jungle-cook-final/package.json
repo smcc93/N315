@@ -12,5 +12,10 @@
     "deploy": "firebase deploy --except functions"
   },
   "author": "Stewart McCalley",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "firebase-tools": "^7.12.1",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.13.1"
+  }
 }

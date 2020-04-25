@@ -1,0 +1,58 @@
+.logo {
+  position: absolute;
+  top: 38px;
+  left: 50px;
+  width: 168px;
+  height: 55px;
+  // background-color: green;
+  z-index: 99;
+}
+
+.nav-holder {
+  position: absolute;
+  top: 38px;
+  right: 50px;
+  height: 52px;
+  width: 400px;
+  // background-color: red;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    text-decoration: none;
+  }
+  #login {
+    background-color: #ffd972;
+    border-radius: 26px;
+    padding: 16px 50px;
+  }
+}
+
+.bars {
+  position: absolute;
+  z-index: 100;
+  top: 55px;
+  right: 50px;
+  cursor: pointer;
+  display: none;
+  height: 20px;
+  width: 31px;
+}
+
+@media all and (max-width: 768px) {
+  .nav-holder {
+    display: none;
+    //  background-color: green;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  .bars {
+    display: block;
+  }
+}

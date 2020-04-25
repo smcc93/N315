@@ -13,7 +13,7 @@
   top: 38px;
   right: 50px;
   height: 52px;
-  width: 400px;
+  width: 600px;
   // background-color: red;
   z-index: 99;
   display: flex;
@@ -21,6 +21,10 @@
   align-items: center;
   a {
     text-decoration: none;
+    font-family: $caveat;
+    font-size: 25px;
+    color: black;
+    font-style: italic;
   }
   #login {
     background-color: #ffd972;

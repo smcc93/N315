@@ -29,13 +29,17 @@ p {
   top: 38px;
   right: 50px;
   height: 52px;
-  width: 400px;
+  width: 600px;
   z-index: 99;
   display: flex;
   justify-content: space-between;
   align-items: center; }
   .nav-holder a {
-    text-decoration: none; }
+    text-decoration: none;
+    font-family: "caveat", sans-serif;
+    font-size: 25px;
+    color: black;
+    font-style: italic; }
   .nav-holder #login {
     background-color: #ffd972;
     border-radius: 26px;
@@ -62,3 +66,36 @@ p {
     justify-content: space-around; }
   .bars {
     display: block; } }
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 50px;
+  height: 18px;
+  display: flex;
+  justify-content: space-around; }
+  .footer .copyright {
+    width: 262px;
+    height: 18px;
+    text-align: left;
+    font-family: "lato", sans-serif;
+    font-size: 15px;
+    font-style: italic; }
+  .footer .bottom-nav {
+    width: 550px;
+    height: 18px;
+    font-family: "lato", sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between; }
+  .footer .social-media {
+    width: 70px;
+    display: flex;
+    height: 18px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between; }
+    .footer .social-media .sm-icon {
+      height: 18px;
+      width: 18px; }

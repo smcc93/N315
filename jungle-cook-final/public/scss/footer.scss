@@ -1,0 +1,42 @@
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 50px;
+  //left: 40px;
+  //right: 60px;
+  height: 18px;
+  display: flex;
+  justify-content: space-around;
+
+  .copyright {
+    width: 262px;
+    height: 18px;
+    text-align: left;
+    font-family: $lato;
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  .bottom-nav {
+    width: 550px;
+    height: 18px;
+    font-family: $lato;
+    font-style: italic;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social-media {
+    width: 70px;
+    display: flex;
+    height: 18px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    .sm-icon {
+      height: 18px;
+      width: 18px;
+    }
+  }
+}

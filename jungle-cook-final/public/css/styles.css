@@ -16,6 +16,22 @@ h6,
 p {
   margin-bottom: 15px; }
 
+@font-face {
+  font-family: "lato-italic";
+  src: url("../css/fonts/Lato/Lato-Italic.ttf"); }
+
+@font-face {
+  font-family: "lato-regular";
+  src: url("../css/fonts/Lato/Lato-Regular.ttf"); }
+
+@font-face {
+  font-family: "caveat-bold";
+  src: url("../css/fonts/Caveat/Caveat-Bold.ttf"); }
+
+@font-face {
+  font-family: "caveat-regular";
+  src: url("../css/fonts/Caveat/Caveat-Regular.ttf"); }
+
 .logo {
   position: absolute;
   top: 38px;
@@ -36,14 +52,22 @@ p {
   align-items: center; }
   .nav-holder a {
     text-decoration: none;
-    font-family: "caveat", sans-serif;
+    font-family: caveat-regular;
     font-size: 25px;
-    color: black;
-    font-style: italic; }
+    color: black; }
   .nav-holder #login {
     background-color: #ffd972;
     border-radius: 26px;
     padding: 16px 50px; }
+  .nav-holder .active-box {
+    position: absolute;
+    bottom: 0;
+    height: 12px;
+    width: 100%;
+    display: none; }
+  .nav-holder .active {
+    display: block;
+    background-color: #f2dcc9; }
 
 .bars {
   position: absolute;
@@ -78,14 +102,12 @@ p {
     width: 262px;
     height: 18px;
     text-align: left;
-    font-family: "lato", sans-serif;
-    font-size: 15px;
-    font-style: italic; }
+    font-family: lato-italic;
+    font-size: 15px; }
   .footer .bottom-nav {
     width: 550px;
     height: 18px;
-    font-family: "lato", sans-serif;
-    font-style: italic;
+    font-family: lato-italic;
     font-size: 15px;
     display: flex;
     justify-content: space-between; }
@@ -99,3 +121,168 @@ p {
     .footer .social-media .sm-icon {
       height: 18px;
       width: 18px; }
+
+@media all and (max-width: 1000px) {
+  .footer {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center; } }
+
+.recipes {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a7e8bd; }
+  .recipes .recipe-hero {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(167, 232, 189, 0.6), rgba(167, 232, 189, 0.6)), url("../images/recipe-hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .recipes .recipe-hero h1 {
+      font-family: caveat-bold;
+      font-size: 25px;
+      position: absolute;
+      left: 107px;
+      top: 195px; }
+    .recipes .recipe-hero .recipe-list {
+      width: 80%; }
+      .recipes .recipe-hero .recipe-list .recipe {
+        display: flex; }
+        .recipes .recipe-hero .recipe-list .recipe .picture {
+          width: 300px;
+          height: 263px;
+          background-color: red;
+          border-radius: 24px; }
+        .recipes .recipe-hero .recipe-list .recipe .recipe-instructions {
+          width: 224px;
+          height: 263px;
+          display: flex;
+          flex-direction: column;
+          background-color: #ffffff;
+          justify-content: space-evenly;
+          align-items: center;
+          border-radius: 24px; }
+          .recipes .recipe-hero .recipe-list .recipe .recipe-instructions h3 {
+            font-family: lato-regular;
+            font-size: 15px; }
+          .recipes .recipe-hero .recipe-list .recipe .recipe-instructions h3:after {
+            content: "";
+            display: block;
+            width: 130px;
+            border-bottom: 3px solid black; }
+          .recipes .recipe-hero .recipe-list .recipe .recipe-instructions p {
+            font-family: lato-regular;
+            font-size: 9px;
+            text-align: center;
+            width: 138px;
+            height: 55px; }
+          .recipes .recipe-hero .recipe-list .recipe .recipe-instructions .time {
+            width: 84px;
+            height: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center; }
+            .recipes .recipe-hero .recipe-list .recipe .recipe-instructions .time .time-img {
+              width: 23px;
+              height: 24px;
+              background-image: url("../images/time.svg");
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover; }
+            .recipes .recipe-hero .recipe-list .recipe .recipe-instructions .time p {
+              width: 43px;
+              height: 12px;
+              font-family: lato-regular;
+              font-size: 10px; }
+          .recipes .recipe-hero .recipe-list .recipe .recipe-instructions .servings {
+            width: 84px;
+            height: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center; }
+            .recipes .recipe-hero .recipe-list .recipe .recipe-instructions .servings .serving-img {
+              width: 23px;
+              height: 24px;
+              background-image: url("../images/servings.svg");
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover; }
+            .recipes .recipe-hero .recipe-list .recipe .recipe-instructions .servings p {
+              width: 46px;
+              height: 12px;
+              font-family: lato-regular;
+              font-size: 10px; }
+
+.home {
+  height: 100%;
+  width: 100%;
+  background-color: #f25c54;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .home .hero {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(242, 92, 84, 0.6), rgba(242, 92, 84, 0.6)), url("../images/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .home .hero .circles {
+      width: 450px;
+      height: 450px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .home .hero .circles .yellow-circle {
+        height: 340px;
+        width: 340px;
+        background-color: #ffd972;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        text-align: center; }
+        .home .hero .circles .yellow-circle h1 {
+          font-family: caveat-bold;
+          font-size: 24px;
+          width: 164px;
+          height: 80px; }
+        .home .hero .circles .yellow-circle p {
+          font-family: lato-regular;
+          font-size: 13px;
+          width: 164px;
+          height: 80px; }
+      .home .hero .circles .pink-circle {
+        height: 168px;
+        width: 168px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #fcbcb8;
+        position: absolute;
+        right: 0;
+        top: 0; }
+        .home .hero .circles .pink-circle p {
+          font-family: lato-italic;
+          font-size: 10px;
+          width: 106px;
+          height: 38px; }

@@ -21,15 +21,27 @@
   align-items: center;
   a {
     text-decoration: none;
-    font-family: $caveat;
+    font-family: caveat-regular;
     font-size: 25px;
     color: black;
-    font-style: italic;
   }
   #login {
     background-color: #ffd972;
     border-radius: 26px;
     padding: 16px 50px;
+  }
+
+  .active-box {
+    position: absolute;
+    bottom: 0;
+    height: 12px;
+    width: 100%;
+    display: none;
+  }
+
+  .active {
+    display: block;
+    background-color: #f2dcc9;
   }
 }
 

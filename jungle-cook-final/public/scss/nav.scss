@@ -29,6 +29,7 @@
     background-color: #ffd972;
     border-radius: 26px;
     padding: 16px 50px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
   }
 
   .active-box {
@@ -41,7 +42,7 @@
 
   .active {
     display: block;
-    background-color: #f2dcc9;
+    background-color: #000000;
   }
 }
 
@@ -66,6 +67,10 @@
     right: 0;
     flex-direction: column-reverse;
     justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+    a {
+      color: white;
+    }
   }
 
   .bars {

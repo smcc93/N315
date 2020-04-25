@@ -58,7 +58,8 @@ p {
   .nav-holder #login {
     background-color: #ffd972;
     border-radius: 26px;
-    padding: 16px 50px; }
+    padding: 16px 50px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5); }
   .nav-holder .active-box {
     position: absolute;
     bottom: 0;
@@ -67,7 +68,7 @@ p {
     display: none; }
   .nav-holder .active {
     display: block;
-    background-color: #f2dcc9; }
+    background-color: #000000; }
 
 .bars {
   position: absolute;
@@ -87,13 +88,16 @@ p {
     top: 0;
     right: 0;
     flex-direction: column-reverse;
-    justify-content: space-around; }
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8); }
+    .nav-holder a {
+      color: white; }
   .bars {
     display: block; } }
 
 .footer {
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 50px;
   height: 18px;
   display: flex;
@@ -127,6 +131,101 @@ p {
     flex-direction: column-reverse;
     justify-content: space-around;
     align-items: center; } }
+
+.login {
+  min-height: 100%;
+  width: 100%;
+  background-color: #ffd972;
+  justify-content: space-around;
+  align-items: center;
+  display: flex; }
+  .login .login-box {
+    width: 209px;
+    height: 301px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .login .login-box h1 {
+      height: 36px;
+      width: 189px;
+      font-family: lato-regular;
+      font-size: 30px; }
+    .login .login-box input {
+      width: 209px;
+      height: 15px;
+      font-family: lato-regular;
+      font-size: 12px;
+      color: black;
+      border-bottom-style: solid;
+      border-top-style: hidden;
+      border-left-style: hidden;
+      border-right-style: hidden;
+      margin: 50px;
+      background-color: #ffd972; }
+    .login .login-box ::placeholder {
+      color: black;
+      font-family: lato-regular;
+      font-size: 12px; }
+    .login .login-box .login-button {
+      height: 52px;
+      width: 209px;
+      background-color: #ffd972;
+      border-radius: 26px;
+      padding: 16px 50px;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+      font-family: caveat-regular;
+      font-size: 25px;
+      text-align: center; }
+  .login .sign-up {
+    width: 250px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .login .sign-up p {
+      height: 15px;
+      width: 137px;
+      font-family: lato-italic;
+      font-size: 12px; }
+    .login .sign-up h1 {
+      width: 135px;
+      height: 36px;
+      font-family: lato-regular;
+      font-size: 30px; }
+    .login .sign-up input {
+      width: 250px;
+      height: 15px;
+      color: black;
+      border-bottom-style: solid;
+      border-top-style: hidden;
+      border-left-style: hidden;
+      border-right-style: hidden;
+      margin: 50px;
+      background-color: #ffd972; }
+    .login .sign-up ::placeholder {
+      color: black;
+      font-family: lato-regular;
+      font-size: 12px; }
+    .login .sign-up .sign-up-button {
+      height: 52px;
+      width: 250px;
+      background-color: #ffd972;
+      border-radius: 26px;
+      padding: 16px 50px;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+      font-family: caveat-regular;
+      font-size: 25px;
+      text-align: center; }
+
+@media all and (max-width: 768px) {
+  .login {
+    flex-direction: column; }
+    .login .login-box {
+      margin: 200px 0px 100px 0px; }
+    .login .sign-up {
+      margin: 100px 0px 200px 0px; } }
 
 .recipes {
   height: 100%;

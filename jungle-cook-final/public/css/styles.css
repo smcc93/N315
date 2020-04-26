@@ -16,6 +16,10 @@ h6,
 p {
   margin-bottom: 15px; }
 
+.showPage {
+  height: 100%;
+  width: 100%; }
+
 @font-face {
   font-family: "lato-italic";
   src: url("../css/fonts/Lato/Lato-Italic.ttf"); }
@@ -60,15 +64,16 @@ p {
     border-radius: 26px;
     padding: 16px 50px;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5); }
-  .nav-holder .active-box {
+  .nav-holder a:after {
+    content: "";
     position: absolute;
     bottom: 0;
-    height: 12px;
+    height: 3px;
     width: 100%;
     display: none; }
   .nav-holder .active {
     display: block;
-    background-color: #000000; }
+    border-bottom: 3px solid #000000; }
 
 .bars {
   position: absolute;
@@ -80,7 +85,7 @@ p {
   height: 20px;
   width: 31px; }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .nav-holder {
     display: none;
     width: 100%;
@@ -373,7 +378,8 @@ p {
     width: 422px;
     height: 52px;
     border-radius: 26px;
-    background-color: #efa7a7; }
+    background-color: #efa7a7;
+    margin-bottom: 200px; }
 
 .home {
   height: 100%;
@@ -443,19 +449,31 @@ p {
   min-height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: left; }
   .view-recipe .image-text {
+    width: 80%;
     display: flex;
     margin-top: 250px;
     justify-content: center;
-    align-items: center; }
-    .view-recipe .image-text .vertical-text {
-      width: 223px;
-      height: 30px;
-      transform: rotate(270deg);
-      margin-right: -80px;
+    align-items: left;
+    font-family: caveat-regular;
+    font-size: 20px; }
+    .view-recipe .image-text h3 {
       font-family: lato-regular;
       font-size: 25px; }
+    .view-recipe .image-text h4 {
+      font-family: lato-regular;
+      font-size: 20px; }
+    .view-recipe .image-text .vertical-text {
+      min-width: 300px;
+      height: 30px;
+      transform: matrix(0, -1, 1, 0, 0, 0);
+      font-family: lato-regular;
+      font-size: 25px;
+      margin-right: -100px;
+      margin-left: 50px;
+      margin-top: 50px; }
     .view-recipe .image-text .dish-image {
       width: 468px;
       height: 421px;
@@ -463,3 +481,42 @@ p {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; }
+    .view-recipe .image-text .recipe-desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 421px;
+      margin-left: 5%; }
+      .view-recipe .image-text .recipe-desc .description {
+        width: 455px;
+        height: 106px; }
+  .view-recipe .text-cont {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-left: 20%;
+    margin-bottom: 100px;
+    font-family: caveat-regular;
+    font-size: 20px; }
+    .view-recipe .text-cont h3 {
+      font-family: lato-regular;
+      font-size: 25px; }
+    .view-recipe .text-cont .ingredients {
+      width: 80%;
+      height: 215px;
+      margin-top: 100px; }
+    .view-recipe .text-cont .instructions {
+      width: 80%;
+      height: 175px;
+      margin-top: 100px;
+      margin-bottom: 50px; }
+    .view-recipe .text-cont .edit-btn {
+      height: 42px;
+      width: 128px;
+      border-radius: 26px;
+      background-color: #ffd972;
+      font-family: caveat-regular;
+      font-size: 20px;
+      margin-top: 50px; }

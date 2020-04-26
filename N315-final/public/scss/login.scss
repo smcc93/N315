@@ -1,0 +1,120 @@
+.login {
+  min-height: 100%;
+  width: 100%;
+  background-color: $site-yellow;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+
+  .login-box {
+    width: 209px;
+    height: 301px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      height: 36px;
+      width: 189px;
+      font-family: lato-regular;
+      font-size: 30px;
+    }
+    input {
+      width: 209px;
+      height: 15px;
+      font-family: lato-regular;
+      font-size: 12px;
+      color: black;
+      border-bottom-style: solid;
+      border-top-style: hidden;
+      border-left-style: hidden;
+      border-right-style: hidden;
+
+      //border: none;
+      margin: 50px;
+      background-color: $site-yellow;
+    }
+    ::placeholder {
+      color: black;
+      font-family: lato-regular;
+      font-size: 12px;
+    }
+    .login-button {
+      height: 52px;
+      width: 209px;
+      background-color: #ffd972;
+      border-radius: 26px;
+      padding: 16px 50px;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+      font-family: caveat-regular;
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+
+  .sign-up {
+    width: 250px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      height: 15px;
+      width: 137px;
+      font-family: lato-italic;
+      font-size: 12px;
+    }
+    h1 {
+      width: 135px;
+      height: 36px;
+      font-family: lato-regular;
+      font-size: 30px;
+    }
+    input {
+      width: 250px;
+      height: 15px;
+
+      color: black;
+      border-bottom-style: solid;
+      border-top-style: hidden;
+      border-left-style: hidden;
+      border-right-style: hidden;
+
+      //border: none;
+      margin: 50px;
+      background-color: $site-yellow;
+    }
+    ::placeholder {
+      color: black;
+      font-family: lato-regular;
+      font-size: 12px;
+    }
+
+    .sign-up-button {
+      height: 52px;
+      width: 250px;
+      background-color: #ffd972;
+      border-radius: 26px;
+      padding: 16px 50px;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+      font-family: caveat-regular;
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .login {
+    flex-direction: column;
+
+    .login-box {
+      margin: 200px 0px 100px 0px;
+    }
+
+    .sign-up {
+      margin: 100px 0px 200px 0px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.create-edit {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+  margin-top: 100px;
+
+  .form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    margin-left: 10%;
+    .greeting {
+      font-family: caveat-bold;
+      font-size: 25px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .add-image {
+      position: absolute;
+      top: 230px;
+      right: 20%;
+      width: 110px;
+      height: 36px;
+      background: $site-midpink;
+      box-shadow: 0px 10px 6px #00000029;
+      opacity: 1;
+      border-radius: 25px;
+    }
+    h3 {
+      font-family: lato-black;
+      font-size: 20px;
+      margin-left: 25px;
+      margin-top: 50px;
+    }
+    input {
+      border-bottom-style: solid;
+      border-top-style: hidden;
+      border-left-style: hidden;
+      border-right-style: hidden;
+      margin: 25px;
+      width: 80%;
+    }
+    ::placeholder {
+      color: black;
+      font-family: lato-regular;
+      font-size: 12px;
+    }
+  }
+  .create-edit-btn {
+    width: 422px;
+    height: 52px;
+    border-radius: 26px;
+    background-color: $site-midpink;
+    margin-bottom: 200px;
+  }
+}

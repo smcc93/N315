@@ -322,6 +322,59 @@ p {
               font-family: lato-regular;
               font-size: 10px; }
 
+.create-edit {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+  margin-top: 100px; }
+  .create-edit .form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    margin-left: 10%; }
+    .create-edit .form .greeting {
+      font-family: caveat-bold;
+      font-size: 25px;
+      margin-top: 50px;
+      margin-bottom: 50px; }
+    .create-edit .form .add-image {
+      position: absolute;
+      top: 230px;
+      right: 20%;
+      width: 110px;
+      height: 36px;
+      background: #efa7a7;
+      box-shadow: 0px 10px 6px #00000029;
+      opacity: 1;
+      border-radius: 25px; }
+    .create-edit .form h3 {
+      font-family: lato-black;
+      font-size: 20px;
+      margin-left: 25px;
+      margin-top: 50px; }
+    .create-edit .form input {
+      border-bottom-style: solid;
+      border-top-style: hidden;
+      border-left-style: hidden;
+      border-right-style: hidden;
+      margin: 25px;
+      width: 80%; }
+    .create-edit .form ::placeholder {
+      color: black;
+      font-family: lato-regular;
+      font-size: 12px; }
+  .create-edit .create-edit-btn {
+    width: 422px;
+    height: 52px;
+    border-radius: 26px;
+    background-color: #efa7a7; }
+
 .home {
   height: 100%;
   width: 100%;
@@ -385,3 +438,28 @@ p {
           font-size: 10px;
           width: 106px;
           height: 38px; }
+
+.view-recipe {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .view-recipe .image-text {
+    display: flex;
+    margin-top: 250px;
+    justify-content: center;
+    align-items: center; }
+    .view-recipe .image-text .vertical-text {
+      width: 223px;
+      height: 30px;
+      transform: rotate(270deg);
+      margin-right: -80px;
+      font-family: lato-regular;
+      font-size: 25px; }
+    .view-recipe .image-text .dish-image {
+      width: 468px;
+      height: 421px;
+      background-image: url("../images/recipe-pizza.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }

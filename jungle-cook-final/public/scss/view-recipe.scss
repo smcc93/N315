@@ -1,0 +1,28 @@
+.view-recipe {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .image-text {
+    display: flex;
+    margin-top: 250px;
+    justify-content: center;
+    align-items: center;
+    .vertical-text {
+      width: 223px;
+      height: 30px;
+      transform: rotate(270deg);
+      margin-right: -80px;
+      font-family: lato-regular;
+      font-size: 25px;
+    }
+    .dish-image {
+      width: 468px;
+      height: 421px;
+      background-image: url("../images/recipe-pizza.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}

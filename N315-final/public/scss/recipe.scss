@@ -37,7 +37,11 @@
         .picture {
           width: 300px;
           height: 263px;
-          background-color: red;
+          //background-color: red;
+          background-image: url("../images/recipe-pizza.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
           border-radius: 24px;
         }
         .recipe-instructions {
@@ -111,6 +115,14 @@
             }
           }
         }
+      }
+      .browse-btn {
+        width: 128px;
+        height: 42px;
+        border-radius: 26px;
+        background-color: $site-yellow;
+        font-family: caveat-regular;
+        font-size: 20px;
       }
     }
   }

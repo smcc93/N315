@@ -263,7 +263,10 @@ p {
         .recipes .recipe-hero .recipe-list .recipe .picture {
           width: 300px;
           height: 263px;
-          background-color: red;
+          background-image: url("../images/recipe-pizza.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
           border-radius: 24px; }
         .recipes .recipe-hero .recipe-list .recipe .recipe-instructions {
           width: 224px;
@@ -326,6 +329,13 @@ p {
               height: 12px;
               font-family: lato-regular;
               font-size: 10px; }
+      .recipes .recipe-hero .recipe-list .browse-btn {
+        width: 128px;
+        height: 42px;
+        border-radius: 26px;
+        background-color: #ffd972;
+        font-family: caveat-regular;
+        font-size: 20px; }
 
 .create-edit {
   min-height: 100%;

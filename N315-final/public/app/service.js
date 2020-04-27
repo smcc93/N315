@@ -18,7 +18,7 @@ var SERVICE = (function () {
       .collection("Recipes")
       .get()
       .then(function (querySnapshot) {
-        console.log(querySnapshot);
+        // console.log(querySnapshot);
         callback(querySnapshot);
       });
   };
@@ -71,7 +71,7 @@ var SERVICE = (function () {
 
   var _checkRecipe = function (recipeName, callback) {
     var recipe = _db.collection("Recipes");
-    pageXOffset
+    recipe
       .where("recipeName", "==", recipeName)
       .get()
       .then(function (querySnapshot) {
@@ -152,8 +152,7 @@ var SERVICE = (function () {
   };
 
   var _getRecipePage = function () {
-    let recipePage = `  
-          `;
+    let recipePage = "";
     return recipePage;
   };
 
@@ -199,33 +198,36 @@ var SERVICE = (function () {
         </div>
         <button class="create-edit-btn">Create Recipe</button>
       </div>`;
+
     return createPage;
   };
 
-  var _getEditPage = function () {
+  var _getEditPage = function (id) {
     let editPage = `<div class="create-edit" id="edit">
         <div class="form">
           <h3 class="greeting">Hello, edit your recipe!</h3>
           <input type="text" placeholder="Edit Recipe Image" />
-          <button class="add-image">Attach File</button>
-          <input type="text" placeholder="Recipe Name" />
-          <input type="text" placeholder="Recipe Description" />
-          <input type="text" placeholder="Recipe Total Time" />
-          <input type="text" placeholder="Recipe Serving Size" />
+          <button id="add-image">Attach File</button>
+          <input id='name' type="text" placeholder="Recipe Name" />
+          <input id='desc'type="text" placeholder="Recipe Description" />
+          <input id='time' type="text" placeholder="Recipe Total Time" />
+          <input id='serv' type="text" placeholder="Recipe Serving Size" />
           <h3>Enter Ingredients:</h3>
-          <input type="text" placeholder="Ingredient #1" />
-          <input type="text" placeholder="Ingredient #2" />
-          <input type="text" placeholder="Ingredient #3" />
+          <input id='ing1' type="text" placeholder="Ingredient #1" />
+          <input id='ing2' type="text" placeholder="Ingredient #2" />
+          <input id='ing3' type="text" placeholder="Ingredient #3" />
           <h3>Enter Instructions:</h3>
-          <input type="text" placeholder="Instruction #1" />
-          <input type="text" placeholder="Instruction #2" />
-          <input type="text" placeholder="Instruction #3" />
+          <input id='ins1' type="text" placeholder="Instruction #1" />
+          <input id='ins2' type="text" placeholder="Instruction #2" />
+          <input id='ins3' type="text" placeholder="Instruction #3" />
         </div>
-        <button class="create-edit-btn">Submit Changes</button>
+        <button id='edit' class="create-edit-btn">Submit Changes</button>
       </div>`;
+    updateRecipe(id);
+    return editPage;
   };
 
-  var _getViewRecipe = function () {
+  var _getViewRecipe = function (id) {
     let viewRecipe = `<div class="view-recipe">
         <div class="image-text">
           <h3 class="vertical-text">supreme pizza</h3>
@@ -233,8 +235,7 @@ var SERVICE = (function () {
           <div class="recipe-desc">
             <h3>Description:</h3>
             <div class="description">
-              Make pizza night super duper out of this world with homemade pizza.
-              This recipe is supreme with vegetables and two types of meat. Yum!
+            ${rawdata.recipeDesc}
             </div>
             <h4>Total Time:</h4>
             <div class="time">1h 24min</div>
@@ -277,6 +278,7 @@ var SERVICE = (function () {
           <button class="edit-btn">Edit Recipe</button>
         </div>
       </div>`;
+    goToEdit(id);
     return viewRecipe;
   };
 

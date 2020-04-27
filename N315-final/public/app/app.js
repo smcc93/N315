@@ -22,6 +22,7 @@ function init() {
       $("#" + id).addClass("active");
     } else if (id == "create-recipe") {
       $(".showPage").html(SERVICE.getCreatePage());
+      createRecipe();
       $("#" + id).addClass("active");
     } else if (id == "login") {
       $(".showPage").html(SERVICE.getLoginPage());
@@ -34,17 +35,17 @@ function init() {
 }
 
 function deleteRecipe(id) {
-  $("#delete").click(function (e) {
-    // var id = e.currentTarget.id;
-    SERVICE.deleteRecipe(id, displayRecipes);
-  });
+  //$(".delete").click(function (e) {
+  // var id = e.currentTarget.id;
+  SERVICE.deleteRecipe(id, displayRecipes);
+  // });
 }
 
 function goToEdit(id) {
-  $("#goToEdit").click(function (e) {
-    SERVICE.getEditPage(id);
-    console.log("trying to edit");
-  });
+  //$(".goToEdit").click(function (e) {
+  $(".showPage").html(SERVICE.getEditPage(id));
+  //console.log("trying to edit");
+  // });
 }
 
 function updateRecipe(id) {
@@ -78,6 +79,52 @@ function updateRecipe(id) {
   });
 }
 
+function createRecipe() {
+  $("#create").click(function (e) {
+    // var id = e.currentTarget.id;
+    var newName = $("#newName").val().toLowerCase().trim();
+    var newDesc = $("#newDesc").val().toLowerCase().trim();
+    var newTime = $("#newTime").val().toLowerCase().trim();
+    var newServ = $("#newServ").val().toLowerCase().trim();
+    var newIng1 = $("#newIng1").val().toLowerCase().trim();
+    var newIng2 = $("#newIng2").val().toLowerCase().trim();
+    var newIng3 = $("#newIng3").val().toLowerCase().trim();
+    var newIns1 = $("#newIns1").val().toLowerCase().trim();
+    var newIns2 = $("#newIns2").val().toLowerCase().trim();
+    var newIns3 = $("#newIns3").val().toLowerCase().trim();
+
+    if (
+      newName != "" &&
+      newDesc != "" &&
+      newTime != "" &&
+      newServ != "" &&
+      newIng1 != "" &&
+      newIng2 != "" &&
+      newIng3 != "" &&
+      newIns1 != "" &&
+      newIns2 != "" &&
+      newIns3 != ""
+    ) {
+      console.log("add data");
+      SERVICE.checkRecipe(
+        newName,
+        newDesc,
+        newTime,
+        newServ,
+        newIng1,
+        newIns2,
+        newIng3,
+        newIns1,
+        newIns2,
+        newIns3,
+        alertUser
+      );
+    } else {
+      alert("There is an empty box");
+    }
+  });
+}
+
 function displayRecipes(recipeData) {
   var recipeOverView = `<div class="recipes">
     <div class="recipe-hero">
@@ -102,13 +149,9 @@ function displayRecipes(recipeData) {
           <p>${rawdata.recipeServs}</p>
         </div>
       </div></div><div class= 'button-container'>
-      <button class="browse-btn view" id='${id}'>View</button>
-      <button class="browse-btn goToEdit" id='${id}'>Edit</button>
-      <button class="browse-btn delete" id='${id}'>Delete</button></div></div>`;
-    deleteRecipe(id);
-    goToEdit(id);
-    displayView(id);
-    console.log(id);
+      <button class="browse-btn view" onclick="displayView(${id})">View</button>
+      <button class="browse-btn goToEdit"  onclick="goToEdit(${id})">Edit</button>
+      <button class="browse-btn delete" onclick="deleteRecipe(${id})">Delete</button></div></div>`;
   });
   recipeOverView += `</div>
     </div>
@@ -117,13 +160,15 @@ function displayRecipes(recipeData) {
 }
 
 function displayView(id) {
-  $("#view").click(function (e) {
-    SERVICE.getViewPage(id);
-    console.log("trying to view");
-    console.log(id);
-  });
+  // $(".view").click(function (e) {
+  $(".showPage").html(SERVICE.getViewPage(id));
+  // console.log("trying to view");
+  console.log(id);
+  // });
 }
-
+function alertUser(result) {
+  alert(result);
+}
 $(document).ready(function () {
   init();
   SERVICE.initFirebase();

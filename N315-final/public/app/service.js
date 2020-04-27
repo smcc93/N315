@@ -69,14 +69,38 @@ var SERVICE = (function () {
       });
   };
 
-  var _checkRecipe = function (recipeName, callback) {
+  var _checkRecipe = function (
+    newName,
+    newDesc,
+    newTime,
+    newServ,
+    newIng1,
+    newIns2,
+    newIng3,
+    newIns1,
+    newIns2,
+    newIns3,
+    callback
+  ) {
     var recipe = _db.collection("Recipes");
     recipe
-      .where("recipeName", "==", recipeName)
+      .where("recipeName", "==", newName)
       .get()
       .then(function (querySnapshot) {
         if (querySnapshot.empty) {
-          _addRecipe(recipeName, callback);
+          _addRecipe(
+            newName,
+            newDesc,
+            newTime,
+            newServ,
+            newIng1,
+            newIns2,
+            newIng3,
+            newIns1,
+            newIns2,
+            newIns3,
+            callback
+          );
         } else {
           callback("Already a recipe with this name");
         }
@@ -183,43 +207,51 @@ var SERVICE = (function () {
           <h3 class="greeting">Hello, create your recipe!</h3>
           <input type="text" placeholder="Add Recipe Image" />
           <button class="add-image">Attach File</button>
-          <input type="text" placeholder="Recipe Name" />
-          <input type="text" placeholder="Recipe Description" />
-          <input type="text" placeholder="Recipe Total Time" />
-          <input type="text" placeholder="Recipe Serving Size" />
+          <input id='newName' type="text" placeholder="Recipe Name" />
+          <input id='newDesc' type="text" placeholder="Recipe Description" />
+          <input id='newTime' type="text" placeholder="Recipe Total Time" />
+          <input id='newServ' type="text" placeholder="Recipe Serving Size" />
           <h3>Enter Ingredients:</h3>
-          <input type="text" placeholder="Ingredient #1" />
-          <input type="text" placeholder="Ingredient #2" />
-          <input type="text" placeholder="Ingredient #3" />
+          <input id='newIng1' type="text" placeholder="Ingredient #1" />
+          <input id='newIng2' type="text" placeholder="Ingredient #2" />
+          <input id='newIng3' type="text" placeholder="Ingredient #3" />
           <h3>Enter Instructions:</h3>
-          <input type="text" placeholder="Instruction #1" />
-          <input type="text" placeholder="Instruction #2" />
-          <input type="text" placeholder="Instruction #3" />
+          <input id=' newIns1' type="text" placeholder="Instruction #1" />
+          <input id=' newIns2' type="text" placeholder="Instruction #2" />
+          <input id=' newIns3' type="text" placeholder="Instruction #3" />
         </div>
-        <button class="create-edit-btn">Create Recipe</button>
+        <button id='create' class="create-edit-btn">Create Recipe</button>
       </div>`;
 
     return createPage;
   };
 
   var _getEditPage = function (id) {
+    _db
+      .collection("Recipes")
+      .doc(id)
+      .get()
+      .then(function (doc) {
+        console.log(doc.data());
+      });
+    var rawData = doc.data();
     let editPage = `<div class="create-edit" id="edit">
         <div class="form">
           <h3 class="greeting">Hello, edit your recipe!</h3>
           <input type="text" placeholder="Edit Recipe Image" />
-          <button id="add-image">Attach File</button>
-          <input id='name' type="text" placeholder="Recipe Name" />
-          <input id='desc'type="text" placeholder="Recipe Description" />
-          <input id='time' type="text" placeholder="Recipe Total Time" />
-          <input id='serv' type="text" placeholder="Recipe Serving Size" />
+          <button class="add-image">Attach File</button>
+          <input id='name' type="text" placeholder="${rawData.recipeName}" />
+          <input id='desc'type="text" placeholder="${rawData.recipeDesc}" />
+          <input id='time' type="text" placeholder="${rawData.recipeTime}" />
+          <input id='serv' type="text" placeholder="${rawData.recipeServs}" />
           <h3>Enter Ingredients:</h3>
-          <input id='ing1' type="text" placeholder="Ingredient #1" />
-          <input id='ing2' type="text" placeholder="Ingredient #2" />
-          <input id='ing3' type="text" placeholder="Ingredient #3" />
+          <input id='ing1' type="text" placeholder="${rawData.recipeIng1}" />
+          <input id='ing2' type="text" placeholder="${rawData.recipeIng2}" />
+          <input id='ing3' type="text" placeholder="${rawData.recipeIng3}" />
           <h3>Enter Instructions:</h3>
-          <input id='ins1' type="text" placeholder="Instruction #1" />
-          <input id='ins2' type="text" placeholder="Instruction #2" />
-          <input id='ins3' type="text" placeholder="Instruction #3" />
+          <input id='ins1' type="text" placeholder="${rawData.recipeIns1}" />
+          <input id='ins2' type="text" placeholder="${rawData.recipeIns2}" />
+          <input id='ins3' type="text" placeholder="${rawData.recipeIns3}" />
         </div>
         <button id='edit' class="create-edit-btn">Submit Changes</button>
       </div>`;
@@ -227,52 +259,53 @@ var SERVICE = (function () {
     return editPage;
   };
 
-  var _getViewRecipe = function (id) {
+  var _getViewRecipe = function (
+    id,
+    recipeName,
+    recipeDesc,
+    recipeTime,
+    recipeServs,
+    ingred1,
+    ingred2,
+    ingred3,
+    instr1,
+    instr2,
+    instr3
+  ) {
     let viewRecipe = `<div class="view-recipe">
         <div class="image-text">
-          <h3 class="vertical-text">supreme pizza</h3>
+          <h3 class="vertical-text">${recipeName}</h3>
           <div class="dish-image"></div>
           <div class="recipe-desc">
             <h3>Description:</h3>
             <div class="description">
-            ${rawdata.recipeDesc}
+            ${recipeDesc}
             </div>
             <h4>Total Time:</h4>
-            <div class="time">1h 24min</div>
+            <div class="time">${recipeTime}</div>
             <h4>Servings:</h4>
-            <div class="servings">4 servings</div>
+            <div class="servings">${recipeServs}</div>
           </div>
         </div>
         <div class="text-cont">
           <div class="ingredients">
             <h3>Ingredients:</h3>
             <ul style="list-style-type: none;">
-              <li>1/4 batch pizza dough</li>
-              <li>2 tablespoons Last-Minute Pizza Sauce</li>
-              <li>10 slices pepperoni</li>
-              <li>1 cup cooked and crumbled Italian sausage</li>
-              <li>2 large mushrooms, sliced</li>
-              <li>1/4 bell pepper, sliced</li>
-              <li>1 tablespoon sliced black olives</li>
-              <li>1 cup shredded mozzarella cheese</li>
+              <li>${ingred1}</li>
+              <li>${ingred2}</li>
+              <li>${ingred3}</li>
             </ul>
           </div>
           <div class="instructions">
             <h3>Instructions:</h3>
-            <ul style="list-style-type: none;">
+            <ul>
               <li>
-                1. Preheat the oven to 475°. Spray pizza pan with nonstick cooking
-                or line a baking sheet with parchment paper.
+               ${instr1}
               </li>
               <li>
-                2. Flatten dough into a thin round and place on the pizza pan.
+                ${instr2}
               </li>
-              <li>3. Spread pizza sauce over the dough.</li>
-              <li>4. Layer the toppings over the dough in the order listed .</li>
-              <li>
-                5. Bake for 8 to 10 minutes or until the crust is crisp and the
-                cheese melted and lightly browned.
-              </li>
+              <li>${instr3}</li>
             </ul>
           </div>
           <button class="edit-btn">Edit Recipe</button>

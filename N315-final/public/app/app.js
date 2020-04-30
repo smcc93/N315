@@ -51,16 +51,16 @@ function goToEdit(id) {
 function updateRecipe(id) {
   $("#edit").click(function (e) {
     // var id = e.currentTarget.id;
-    var newName = $("#name").val().toLowerCase.trim();
-    var newDesc = $("#desc").val().toLowerCase.trim();
-    var newTime = $("#time").val().toLowerCase.trim();
-    var newServ = $("#serv").val().toLowerCase.trim();
-    var newIng1 = $("#ing1").val().toLowerCase.trim();
-    var newIng2 = $("#ing2").val().toLowerCase.trim();
-    var newIng3 = $("#ing3").val().toLowerCase.trim();
-    var newIns1 = $("#ins1").val().toLowerCase.trim();
-    var newIns2 = $("#ins2").val().toLowerCase.trim();
-    var newIns3 = $("#ins3").val().toLowerCase.trim();
+    var newName = $("#name").val().toLowerCase().trim();
+    var newDesc = $("#desc").val().toLowerCase().trim();
+    var newTime = $("#time").val().toLowerCase().trim();
+    var newServ = $("#serv").val().toLowerCase().trim();
+    var newIng1 = $("#ing1").val().toLowerCase().trim();
+    var newIng2 = $("#ing2").val().toLowerCase().trim();
+    var newIng3 = $("#ing3").val().toLowerCase().trim();
+    var newIns1 = $("#ins1").val().toLowerCase().trim();
+    var newIns2 = $("#ins2").val().toLowerCase().trim();
+    var newIns3 = $("#ins3").val().toLowerCase().trim();
 
     SERVICE.updateRecipe(
       id,
